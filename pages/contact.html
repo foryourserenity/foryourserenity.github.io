@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FindingYourSerenity | Contact Us</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="icon" href="/images/favicon.ico" />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="logo">
+        <img src="/images/logo.png" alt="Finding Your Serenity Logo" />
+      </div>
+      <nav>
+        <a href="/index.html">Home</a>
+        <a href="/pages/about.html">About Us</a>
+        <a href="/pages/destinations.html">Destinations</a>
+        <a href="/pages/contact.html">Contact</a>
+        <div class="social-icons">
+          <a
+            href="https://www.facebook.com/profile.php?id=61575942314159"
+            target="_blank"
+          >
+            <img src="/images/facebook.png" alt="Facebook" />
+          </a>
+          <a
+            href="https://www.instagram.com/find_ingyourserenity2025/"
+            target="_blank"
+          >
+            <img src="/images/instagram.png" alt="Instagram" />
+          </a>
+        </div>
+      </nav>
+    </div>
+
+    <div class="whitespace1"></div>
+
+    <section class="contact-form-section">
+      <div class="contact-form-container">
+        <h2>Contact Us</h2>
+        <p>
+          If you have any questions or inquiries, feel free to reach out. We're
+          here to help you find your serenity!
+        </p>
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              placeholder="Your full name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="you@example.com"
+            />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              required
+              placeholder="Subject of your message"
+            />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              required
+              placeholder="Type your message here..."
+            ></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section footer-left">
+          <img id="footer-logo" src="/images/logo.png" alt="Footer Logo" />
+          <h1>Where Tranquility Meets Clarity</h1>
+          <div class="footer-contact">
+            <p>
+              <img
+                src="/images/address.svg"
+                class="footer-icon"
+                alt="Address Icon"
+              />
+              Capitol site, Kalibo, Aklan
+            </p>
+            <p>
+              <img
+                src="/images/contact.svg"
+                class="footer-icon"
+                alt="Phone Icon"
+              />
+              +63 917852125
+            </p>
+            <p>
+              <img
+                src="/images/email.svg"
+                class="footer-icon"
+                alt="Email Icon"
+              />
+              findingyourserenity@gmail.com
+            </p>
+            <p>
+              <img
+                src="/images/clock.svg"
+                class="footer-icon"
+                alt="Clock Icon"
+              />
+              Mon – Fri, 9:00 AM – 6:00 PM
+            </p>
+          </div>
+        </div>
+
+        <div class="footer-section footer-right">
+          <p>
+            FindingYourSerenity is committed to crafting unforgettable travel
+            experiences that inspire adventure, relaxation, and personal growth.
+            We offer personalized itineraries, exceptional service, and unique
+            destinations, ensuring every journey fosters new horizons and inner
+            peace.
+          </p>
+          <p>
+            The vision of FindingYourSerenity is to be a leading travel agency
+            that transforms how people explore the world. Aimed at building a
+            community of passionate travelers seeking meaningful connections
+            with cultures, nature, and themselves. Through sustainable practices
+            and personalized experiences.
+          </p>
+          <p>
+            Goal: To provide personalized travel experiences that promote
+            relaxation and rejuvenation for our clients.
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 FindingYourSerenity. All rights reserved.</p>
+        <div class="social-icons">
+          <a
+            href="https://www.facebook.com/profile.php?id=61575942314159"
+            target="_blank"
+          >
+            <img src="images/facebook.png" alt="Facebook" />
+          </a>
+          <a
+            href="https://www.instagram.com/find_ingyourserenity2025/"
+            target="_blank"
+          >
+            <img src="images/instagram.png" alt="Instagram" />
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script>
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Stop the form from actually submitting
+          alert("Message sent!"); // Show the alert
+          this.reset(); // Clear the form fields
+        });
+    </script>
+  </body>
+</html>

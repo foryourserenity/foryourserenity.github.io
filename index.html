@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FindingYourSerenity | Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="/images/favicon.ico"/>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <div class="logo">
+      <img src="images/logo.png" alt="Finding Your Serenity Logo" />
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="/pages/about.html">About Us</a>
+      <a href="/pages/destinations.html">Destinations</a>
+      <a href="/pages/contact.html">Contact</a>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/profile.php?id=61575942314159" target="_blank">
+          <img src="images/facebook.png" alt="Facebook" />
+        </a>
+        <a href="https://www.instagram.com/find_ingyourserenity2025/" target="_blank">
+          <img src="images/instagram.png" alt="Instagram" />
+        </a>
+      </div>
+    </nav>
+  </div>
+
+  <div class="hero">
+    <video src="/images/hero.MP4" autoplay muted loop playsinline></video>
+    <div class="text">
+      <h1>Where Tranquility Meets Clarity</h1>
+      <p>Whether it's mountains, sunsets, or distant skies — let us take you there. Experience tranquil travel tailored just for you.</p>
+      <div class="cta">
+        <a href="#explore" class="learn-more-btn">Learn More</a>
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="gallery">
+      <h2>Destinations</h2>
+  <div class="destinations" id="destinations">
+
+  <div class="card2" 
+      data-title="India" 
+      data-description="India is a land of vibrant culture, ancient traditions, and diverse landscapes, ranging from the Himalayas to tropical beaches. Known for its rich history and spiritual heritage, it offers unforgettable experiences for every traveler." 
+      data-image="/images/india.JPG" 
+      data-link="/pages/india.html"
+      onclick="openPopup(this)">
+    <img src="/images/india.JPG" alt="India"/>
+    <div class="card2-text">
+      <h3>India</h3>
+    </div>
+  </div>
+
+    <div class="card2"  
+        data-title="France" 
+        data-description="France enchants visitors with its romantic cities, world-renowned cuisine, and timeless art and architecture. From the Eiffel Tower to the vineyards of Bordeaux, it's a destination full of charm and elegance."
+        data-image="/images/paris.JPG" 
+        data-link="/pages/france.html"
+        onclick="openPopup(this)">
+      <img src="/images/paris.JPG"/>
+      <div class="card2-text">
+      <h3>France</h3>
+      </div>
+    </div>
+
+    <div class="card2"  
+        data-title="Italy" 
+        data-description="Italy dazzles with its Renaissance art, historic landmarks, and delectable cuisine. From the canals of Venice to the ruins of Rome, it’s a treasure trove of culture and beauty." 
+        data-image="/images/italy.JPG"
+        data-link="/pages/italy.html" 
+        onclick="openPopup(this)">
+    <img src="/images/italy.JPG"/>
+    <div class="card2-text">
+      <h3>Italy</h3>
+    </div>
+  </div>
+
+  <div class="card2"  
+  data-title="Egypt" 
+  data-description="Egypt, the cradle of ancient civilization, mesmerizes with its pyramids, pharaohs, and timeless Nile River. It's a place where history and mythology come alive at every corner." 
+  data-image="/images/egypt.JPG" 
+  data-link="/pages/egypt.html"
+  onclick="openPopup(this)">
+      <img src="/images/egypt.JPG"/>
+      <div class="card2-text">
+      <h3>Egypt</h3>
+      </div>
+    </div>
+
+    <div class="card2"  
+    data-title="Cambodia" 
+    data-description="Cambodia captivates with its awe-inspiring temples, especially the world-famous Angkor Wat. Beyond its ancient history, the country offers warm hospitality and a resilient spirit." 
+    data-image="/images/cambodia.JPG" 
+    data-link="/pages/cambodia.html"
+    onclick="openPopup(this)">
+      <img src="/images/cambodia.JPG"/>
+      <div class="card2-text">
+      <h3>Cambodia</h3>
+      </div>
+    </div>
+
+    <div class="card2"  
+    data-title="Finland" 
+    data-description="Finland is a Nordic gem famous for its serene lakes, vast forests, and the magical Northern Lights. It's a country where modern innovation meets quiet natural beauty and deep cultural roots." 
+    data-image="/images/finland.JPG" 
+    data-link="/pages/finland.html"
+    onclick="openPopup(this)">
+      <img src="/images/finland.JPG"/>
+      <div class="card2-text">
+      <h3>Finland</h3>
+      </div>
+    </div>
+
+    <div class="card2"  
+    data-title="Baguio City" 
+    data-description="Known as the &#x0022Summer Capital of the Philippines,&#x0022 Baguio City offers a cool mountain retreat with pine forests, vibrant markets, and cozy cafes. It’s a perfect blend of scenic beauty and cultural charm." 
+    data-image="/images/baguio.JPG" 
+    data-link="/pages/baguio.html"
+    onclick="openPopup(this)">
+      <img src="/images/baguio.JPG"/>
+      <div class="card2-text">
+      <h3>Baguio City</h3>
+      </div>
+    </div>
+
+    <div class="card2"  
+    data-title="Davao City" 
+    data-description="Davao City is a thriving urban hub in Mindanao known for its clean streets, friendly locals, and rich biodiversity. It’s home to the majestic Mount Apo and the rare Philippine eagle." 
+    data-image="/images/davao.JPG" 
+    data-link="/pages/davao.html"
+    onclick="openPopup(this)">
+      <img src="/images/davao.JPG"/>
+      <div class="card2-text">
+      <h3>Davao City</h3>
+      </div>
+    </div>
+  </div>
+  <a class="see-more-btn" href="/pages/destinations.html">See More</a>
+</div>
+
+
+<div class="popup-overlay" id="popup">
+  <div class="popup-box">
+    <span class="close-btn" onclick="closePopup()">×</span>
+    <img id="popup-img" src="" alt="">
+    <div class="popup-text">
+      <h2 id="popup-title"></h2>
+      <p id="popup-description"></p>
+      <button class="popup-button">Explore More</button>
+    </div>
+  </div>
+</div>
+
+
+    <div class="offerings"  id="explore">
+        <h2>What We Offer</h2>
+        <div class="offerings-avail">
+        <div class="card1">
+          <h3>Customized Destinations</h3>
+          <p>We handpick peaceful and scenic destinations that nourish your soul.</p>
+        </div>
+        <div class="card1">
+          <h3>Mindful Travel</h3>
+          <p>Our itineraries encourage reflection, rest, and mental well-being.</p>
+        </div>
+        <div class="card1">
+          <h3>Authentic Experiences</h3>
+          <p>Engage with locals, explore hidden gems, and find meaning in the journey.</p>
+        </div>
+      </div>
+      <div class="offerings-avail2">
+      <div class="card1">
+        <h3>Tour Packages</h3>
+        <p>Carefully curated trips designed to soothe your soul and inspire your spirit.p>
+      </div>
+      <div class="card1">
+        <h3>Travel Tips</h3>
+        <p>Simple advice to help you travel smarter, safer, and more mindfully.</p>
+      </div>
+    </div>
+    </div>
+
+    <div class="why-header">
+      <h2>➤ Why Choose Serenity Travel</h2>
+    </div>
+    
+    <div class="why-serenity">
+      <div class="why-card">
+        <h3>Personalized Service</h3>
+        <p>Our experts create custom travel plans tailored to your preferences, backed by agents who understand your needs.</p>
+      </div>
+      
+      <div class="why-card">
+        <h3>Expert Knowledge</h3>
+        <p>Get insider tips on destinations, local gems, and helpful advice for smooth, culturally aware travel.</p>
+      </div>
+      
+      <div class="why-card">
+        <h3>Convenience</h3>
+        <p>Enjoy a seamless booking experience for flights, stays, and activities — we handle the details so you don’t have to.</p>
+      </div>
+      
+      <div class="why-card">
+        <h3>Exclusive Deals</h3>
+        <p>Unlock special discounts and group rates that aren’t available to the general public.</p>
+      </div>
+      
+      <div class="why-card">
+        <h3>Support & Assistance</h3>
+        <p>Benefit from 24/7 support and expert help when plans change, so your journey stays stress-free.</p>
+      </div>      
+    
+      <div class="why-card">
+        <h3>Trust & Responsibility</h3>
+        <p>Eco-friendly travel options and consistently great reviews — a company you can feel good about.</p>
+      </div>         
+    </div>
+    
+
+  <!-- <footer class="footer">
+    <p>&copy; 2025 Finding Your Serenity. All rights reserved.</p>
+  </footer> -->
+
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section footer-left">
+        <img id="footer-logo" src="/images/logo.png" alt="Footer Logo">
+        <h1>Where Tranquility Meets Clarity</h1>
+        <div class="footer-contact">
+          <p><img src="/images/address.svg" class="footer-icon" alt="Address Icon"> Capitol site, Kalibo, Aklan</p>
+          <p><img src="/images/contact.svg" class="footer-icon" alt="Phone Icon"> +63 917852125</p>
+          <p><img src="/images/email.svg" class="footer-icon" alt="Email Icon"> findingyourserenity@gmail.com</p>
+          <p><img src="/images/clock.svg" class="footer-icon" alt="Clock Icon"> Mon – Fri, 9:00 AM – 6:00 PM</p>
+        </div>
+      </div>
+      
+      
+      <div class="footer-section footer-right">
+        <p>FindingYourSerenity is committed to crafting unforgettable travel experiences that inspire adventure, relaxation, and personal growth. We offer personalized itineraries, exceptional service, and unique destinations, ensuring every journey fosters new horizons and inner peace.</p>
+        <p>The vision of FindingYourSerenity is to be a leading travel agency that transforms how people explore the world. Aimed at building a community of passionate travelers seeking meaningful connections with cultures, nature, and themselves. Through sustainable practices and personalized experiences.</p>
+        <p>Goal: To provide personalized travel experiences that promote relaxation and rejuvenation for our clients.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 FindingYourSerenity. All rights reserved.</p>
+      <div class="social-icons">
+      <a href="https://www.facebook.com/profile.php?id=61575942314159" target="_blank">
+        <img src="images/facebook.png" alt="Facebook" />
+      </a>
+      <a href="https://www.instagram.com/find_ingyourserenity2025/" target="_blank">
+        <img src="images/instagram.png" alt="Instagram" />
+      </a>
+    </div>
+    </div>
+  </footer>  
+  
+<script src="script.js"></script>
+</body>
+</html>

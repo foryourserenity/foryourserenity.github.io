@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Popup Preview</title>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+
+      /* Popup background overlay */
+      .popup-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+      }
+
+      /* Popup content box */
+      .popup-box {
+        background: #fff;
+        width: 80%;
+        max-width: 900px;
+        padding: 20px;
+        border-radius: 15px;
+        position: relative;
+        display: flex;
+        gap: 20px;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+      }
+
+      .popup-box img {
+        max-width: 45%;
+        border-radius: 10px;
+      }
+
+      .popup-text {
+        flex: 1;
+      }
+
+      .popup-text h2 {
+        margin-top: 0;
+        color: #333;
+      }
+
+      .popup-text p {
+        color: #555;
+        margin: 10px 0;
+      }
+
+      .popup-button {
+        background-color: #9147ff;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+
+      .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 24px;
+        cursor: pointer;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Trigger Button -->
+    <button onclick="showPopup()">Open Presentation Preview</button>
+
+    <!-- Popup HTML -->
+    <div class="popup-overlay" id="popup">
+      <div class="popup-box">
+        <span class="close-btn" onclick="closePopup()">×</span>
+        <img
+          src="/mnt/data/eeb7ae62-c8a3-4ae7-ab8e-aa9abc00a9a9.png"
+          alt="Preview"
+        />
+        <div class="popup-text">
+          <h2>Aralin Sa Filipino Presentation</h2>
+          <p><strong>Format:</strong> 16:9 — 1920 × 1080 px</p>
+          <p><strong>By:</strong> PL</p>
+          <button class="popup-button">Customize this template</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function showPopup() {
+        document.getElementById("popup").style.display = "flex";
+      }
+
+      function closePopup() {
+        document.getElementById("popup").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

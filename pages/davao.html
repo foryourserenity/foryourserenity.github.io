@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FindingYourSerenity | Davao Tour Package</title>
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="icon" href="/images/favicon.ico"/>
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">
+      <img src="/images/logo.png" alt="Finding Your Serenity Logo" />
+    </div>
+    <nav>
+      <a href="/index.html">Home</a>
+      <a href="/pages/about.html">About Us</a>
+      <a href="/pages/destinations.html">Destinations</a>
+      <a href="/pages/contact.html">Contact</a>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/profile.php?id=61575942314159" target="_blank">
+          <img src="/images/facebook.png" alt="Facebook" />
+        </a>
+        <a href="https://www.instagram.com/find_ingyourserenity2025/" target="_blank">
+          <img src="/images/instagram.png" alt="Instagram" />
+        </a>
+      </div>
+    </nav>
+  </div>
+
+  <div class="whitespace"></div>
+  
+  <div id="carousel-france" class="left-images-carousel">
+    <div class="carousel-wrapper">
+      <button class="carousel-btn prev" onclick="moveSlide('france', -1)">&#10094;</button>
+      <div class="carousel">
+        <div class="carousel-track" id="track-france">
+          <img src="/images/davao1.PNG" />
+          <img src="/images/davao2.PNG" />
+        </div>
+      </div>
+      <button class="carousel-btn next" onclick="moveSlide('france', 1)">&#10095;</button>
+    </div>
+  </div>
+
+  <div class="carousel-actions">
+    <button class="action-btn customize-btn">Customize</button>
+    <button class="action-btn book-btn">Book Now</button>
+  </div>
+
+
+<div id="bookingModal" class="modal">
+  <div class="modal-content">
+    <span id="closeBooking" class="close">&times;</span>
+    <h2>Book Your Tour</h2>
+    <form id="bookingForm">
+
+      <div class="form-group">
+        <label for="tourPackage">Tour Package</label>
+        <input type="text" id="tourPackage" name="tourPackage" readonly placeholder="Davao City Tour Package"/>
+      </div>      
+
+      <div class="form-group dual-input">
+        <div>
+          <label for="firstName">First Name</label>
+          <input type="text" id="firstName" name="firstName" placeholder="First" required />
+        </div>
+        <div>
+          <label for="lastName">Last Name</label>
+          <input type="text" id="lastName" name="lastName" placeholder="Last" required />
+        </div>
+      </div>
+
+      <div class="form-group dual-input">
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required />
+        </div>
+        <div>
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" placeholder="09XX-XXX-XXXX" required />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="tourDate">Preferred Tour Date</label>
+        <input type="date" id="tourDate" name="tourDate" required />
+      </div>
+
+      <div class="form-group">
+        <label for="groupSize">How many people are in your group?</label>
+        <input type="number" id="groupSize" name="groupSize" min="1" max="50" required />
+      </div>
+
+      <div class="form-group">
+        <label>What is the best way to contact you?</label>
+        <div class="radio-group">
+          <label><input type="radio" name="contactMethod" value="Phone" required /> Phone</label>
+          <label><input type="radio" name="contactMethod" value="Email" required /> Email</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Preferred Payment Method</label>
+        <div class="radio-group">
+          <label><input type="radio" name="paymentMethod" value="Credit Card" required style="width: auto;"/> Credit Card</label>
+          <label><input type="radio" name="paymentMethod" value="GCash" required /> GCash</label>
+          <label><input type="radio" name="paymentMethod" value="PayPal" required /> PayPal</label>
+        </div>
+      </div>
+
+      <button type="submit" class="submit-btn">Confirm Booking</button>
+    </form>
+  </div>
+</div>
+
+  <div class="whitespace"></div>
+  
+
+  <footer class="foot1">
+    <div class="footer-bottom">
+      <p>&copy; 2025 FindingYourSerenity. All rights reserved.</p>
+      <div class="social-icons">
+      <a href="https://www.facebook.com/profile.php?id=61575942314159" target="_blank">
+        <img src="/images/facebook.png" alt="Facebook" />
+      </a>
+      <a href="https://www.instagram.com/find_ingyourserenity2025/" target="_blank">
+        <img src="/images/instagram.png" alt="Instagram" />
+      </a>
+    </div>
+  </footer>  
+
+<script>
+  const bookingModal = document.getElementById("bookingModal");
+const bookBtn = document.querySelector(".book-btn");
+const closeBooking = document.getElementById("closeBooking");
+const bookingForm = document.getElementById("bookingForm");
+
+bookBtn.addEventListener("click", () => {
+  bookingModal.style.display = "flex";
+});
+
+closeBooking.addEventListener("click", () => {
+  bookingModal.style.display = "none";
+});
+
+window.addEventListener("click", (e) => {
+  if (e.target === bookingModal) {
+    bookingModal.style.display = "none";
+  }
+});
+
+bookingForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const first = bookingForm.firstName.value;
+  const last = bookingForm.lastName.value;
+  const payment = bookingForm.paymentMethod.value;
+
+  alert(`Thank you for booking, ${first} ${last}`);
+  bookingModal.style.display = "none";
+  bookingForm.reset();
+});
+
+let slideIndexes = {
+  france: 0,
+  japan: 0,
+};
+
+function moveSlide(tour, direction) {
+  const track = document.getElementById(`track-${tour}`);
+  const slides = track.querySelectorAll("img");
+
+  slideIndexes[tour] += direction;
+  if (slideIndexes[tour] < 0) slideIndexes[tour] = slides.length - 1;
+  if (slideIndexes[tour] >= slides.length) slideIndexes[tour] = 0;
+
+  track.style.transform = `translateX(-${slideIndexes[tour] * 100}%)`;
+}
+
+function showCarousel(tour) {
+  const franceCarousel = document.getElementById("carousel-france");
+  const japanCarousel = document.getElementById("carousel-japan");
+
+  if (tour === "france") {
+    franceCarousel.style.display = "flex";
+    japanCarousel.style.display = "none";
+    document.getElementById("track-japan").style.transform = "translateX(0)";
+  } else if (tour === "japan") {
+    japanCarousel.style.display = "flex";
+    franceCarousel.style.display = "none";
+    document.getElementById("track-france").style.transform = "translateX(0)";
+  }
+
+  slideIndexes[tour] = 0;
+
+  document.querySelectorAll(".selector-btn").forEach(btn => btn.classList.remove("active"));
+  document.querySelector(`.selector-btn[onclick*="${tour}"]`).classList.add("active");
+}
+
+</script>
+</body>
+</html>
