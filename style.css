@@ -201,7 +201,8 @@ body {
   margin-top: 2rem;
   font-size: 2rem;
   color: var(--yellow);
-  width: auto;
+  width: 13%;
+  background: linear-gradient(#d1992a, #cc5333);
   padding: 15px;
   border-radius: 20px;
 }
@@ -1163,6 +1164,7 @@ input[type="radio"] {
   display: flex;
   align-items: center;
   margin-bottom: 30px;
+  background-color: var(--glass-bg);
 }
 
 .carousel-track2 {
@@ -1247,10 +1249,41 @@ input[type="radio"] {
 }
 
 .carousel-item .text {
-  padding: 2rem;
-  border-radius: 10px;
-  max-width: 500px;
-  width: 100%;
+  padding: 1.5rem;
+  border-radius: var(--card-radius, 12px);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+  color: #333;
+  width: 500px;
+}
+
+.carousel-item .review-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.carousel-item .review-header img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.carousel-item h2 {
+  font-size: 1rem;
+  margin: 0;
+  font-weight: bold;
+  color: var(--yellow);
+}
+
+.carousel-item p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin: 0;
+  color: var(--white);
 }
 
 .carousel-control.prev {
