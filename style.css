@@ -199,9 +199,9 @@ body {
 
 .gallery h2 {
   margin-top: 2rem;
-  color: var(--white);
-  background: radial-gradient(circle at center, #f7b733, #cc5333);
-  width: 13%;
+  font-size: 2rem;
+  color: var(--yellow);
+  width: auto;
   padding: 15px;
   border-radius: 20px;
 }
@@ -217,10 +217,10 @@ body {
 
 .offerings h2 {
   margin-top: 2rem;
-  color: var(--white);
-  background: linear-gradient(to right, #f7b733, #cc5333);
-  width: 13%;
-  padding: 15px;
+  font-size: 2rem;
+  color: var(--yellow);
+  width: auto;
+  padding: 10px;
   border-radius: 20px;
 }
 
@@ -260,7 +260,6 @@ body {
 .why-header h2 {
   font-size: 2rem;
   color: #f7b733;
-  text-decoration: underline;
   margin-bottom: 2rem;
 }
 
@@ -268,7 +267,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   gap: 2rem;
-  padding: 0 2rem 4rem;
+  padding: 0 2rem 1rem;
   color: var(--white);
   font-family: Arial, sans-serif;
 }
@@ -601,7 +600,7 @@ body.popup-open {
 }
 
 .team-section {
-  padding: 4rem 2rem;
+  padding: 1rem 2rem;
   text-align: center;
 }
 
@@ -1157,5 +1156,110 @@ input[type="radio"] {
   background-color: #0f273f;
 }
 
+.airline-carousel {
+  height: 90px; /* Same as navbar */
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
 
+.carousel-track2 {
+  display: flex;
+  animation: slideCarousel 20s linear infinite;
+}
+
+.carousel-track2 img {
+  height: 60px;
+  width: auto;
+  margin: 0 30px;
+  object-fit: contain;
+}
+
+@keyframes slideCarousel {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.testimony-container {
+  text-align: center;
+  padding: 2rem;
+}
+
+.testimony-container::before {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: var(--yellow);
+  width: 100%;
+}
+
+.carousel {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  align-items: center;  
+  justify-content: center;
+}
+
+.carousel-item {
+  flex: 0 0 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  text-align: center;
+  transition: opacity 0.5s ease-in-out;
+  background-color: var(--glass-bg);
+}
+
+.carousel-item.active {
+  display: flex;
+}
+
+.carousel-item p {
+  color: white;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.carousel-item .text {
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.carousel-control.prev {
+  left: 10px;
+  color: var(--orange);
+}
+
+.carousel-control.next {
+  right: 10px;
+  color: var(--orange);
+}
 
